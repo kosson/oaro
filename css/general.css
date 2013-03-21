@@ -1,0 +1,107 @@
+/* 
+    Document   : institutii
+    Created on : Aug 27, 2012, 5:50:22 PM
+    Author     : nicolaus
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+*{
+    font-size: 0.95em;
+}
+
+/*Setare de imagini*/
+.link{
+    width: 4em;
+    background: url(../img/glob.png) no-repeat;
+}
+
+.email{
+    width: 4em;
+    background: url(../img/email.png) no-repeat;
+}
+
+root { 
+    display: block;
+}
+
+#corp{
+    width: 600px;
+    padding: 50px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+#form1{
+        width: 1024px;
+        margin: 0 auto;
+        text-align: justify;
+}
+
+.lis{
+    list-style: none;
+}
+
+.lis a{
+    text-decoration: none;  
+}
+
+.middle{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.country{
+    display: inline-block;
+    padding: 0.5em;
+    background: gainsboro;
+}
+
+.formlist{
+    list-style-type: none;
+}
+
+/*pentru formatarea tuturor selecturilor*/
+.selects{
+    
+}
+
+ul#formadd:first-child{
+    padding: 1em 1em;
+    border: 0.1em coral dashed;
+}
+
+#cities{
+    
+    border: 1px cornsilk dashed;
+}
+
+.combos{
+    padding: 0.1em;
+    background: #eee;
+}
+
+.input_data{
+    
+    padding: 0.1em;
+    background: #d4d4d4;
+}
+
+#insert_new_unit{
+    color: green;
+    padding: 0.4em 0.2em;
+    background-color: #ebff00;
+}
+
+.supl_unit{
+    padding: 0.2em;
+}
+
+#incomingData{
+    border: 1px chocolate solid;
+    padding: 0.5em;
+    background-color: #d4d4d4;
+    font-family: courier;
+    font-size: 0.7em;  
+}
