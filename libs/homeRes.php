@@ -13,19 +13,19 @@
 
 
 class returnData {
-    private $pdo;
-    private $qry = '';
+    private $pdo;				//primeste un obiect PDO care face conexiunea cu baza de date
+    private $qry = '';			//primeste interogarea pentru baza de date
     private $intrebare = '';
     private $resource = '';
     
-    function __construct($conexiune, $interogare) {
+    function __construct($conexiune, $interogare) {	//primeste de la scripturile care apeleaza un obiect PDO care face conexiunea si interogarea
         $this->pdo = $conexiune;
         $this->qry = $interogare;
     }
     
     public function getMyData(){
-        $this->intrebare = $this->pdo->query($this->qry);
-        $this->resource = $this->intrebare->fetchAll(PDO::FETCH_ASSOC);
+        $this->intrebare = $this->pdo->query($this->qry);				//seteaza membrul intrebare cu un handle de interogare propriu unui obiect PDO
+        $this->resource = $this->intrebare->fetchAll(PDO::FETCH_ASSOC);	//se incarca membrul resource cu ce aduce obiectul PDO care a facut interogarea
         return $this->resource;
     } 
 }

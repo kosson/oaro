@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>Depozitele</title>
         <link rel="stylesheet" type="text/css" href="../css/general.css" />
         <script src="../js/jquery-1.8.2.min.js"></script>
         <script src="../js/global.js"></script>
@@ -18,6 +18,11 @@ require_once ('../libs/showMeData.php');
 
 $_SESSION = ''; //variabila de stocare a datelor ce trec spre formularul de adaugare a depozitelor
 
+###
+# PRIMUL SET DE DATE ADUS
+###
+
+//se face o prima interogare care sa aduca date imediat ce se deschide pagina 
 $sql1 = '
 SELECT atom1.name, atom1.name_orig,
 		deposit.name, deposit.descr, deposit.link, 
@@ -41,12 +46,16 @@ GROUP BY deposit.name;
 
     ';
 
-$obj1 = new returnData($pdo, $sql1);
-$datele =  $obj1->getMyData();
+$obj1 = new returnData($pdo, $sql1);	//initializeaza un obiect nou de tip returnData (clasa in homeRes.php) si trimite obiectul PDO si interogarea
+$datele =  $obj1->getMyData();			//odata initializat obiectul returnData, returneza resursa si bag-o in datele
 //echo '<pre>';
 //print_r($datele);
 //echo '</pre>';
 
+
+###
+# AL DOILEA SET DE DATE ADUS
+###
 
 $sql2 = '
     SELECT 
